@@ -18,7 +18,7 @@ class NoteListActivity : AppCompatActivity() {
         initRecyclerView()
         initListeners()
     }
-
+    //Todo the implementation when the note creation and saving logic is done
     private fun initRecyclerView() {
         val noteList = initializeDummyNoteList()
         val noteListAdapter =
