@@ -11,6 +11,7 @@
             android:id="@+id/rcv_note_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layoutAnimation="@anim/note_item_layout_animation"
             tools:listitem="@layout/item_note_list" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

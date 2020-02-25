@@ -4,4 +4,8 @@
     <string name="note_title">Title</string>
     <string name="note_description">Description</string>
     <string name="save_note">Save Note</string>
+    <string name="discard_note_waring">Warning</string>
+    <string name="discard_note_message">Discard this note</string>
+    <string name="discard_btn_text">DISCARD</string>>
+    <string name="cancel_btn_text">CANCEL</string>>
 </resources>

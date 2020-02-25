@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     card_view:cardCornerRadius="@dimen/card_view_corner_radius"
     card_view:cardElevation="@dimen/card_view_elevation"
     card_view:cardUseCompatPadding="true">
@@ -16,11 +18,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_note_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/note_timestamp"
+            android:textStyle="italic"
+            tools:text="TimeStamp" />
+
+        <TextView
             android:id="@+id/tv_note_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
+            android:textStyle="bold"
             android:textSize="@dimen/note_heading"
             tools:text="This is the title Test" />
 
@@ -28,8 +39,8 @@
             android:id="@+id/tv_note_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/grid_2"
-            android:layout_marginBottom="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_2_half"
+            android:layout_marginBottom="@dimen/grid_2_half"
             android:ellipsize="end"
             android:maxLines="2"
             android:textSize="@dimen/note_description"

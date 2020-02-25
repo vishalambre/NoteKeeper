@@ -2,9 +2,11 @@
 <resources>
     <!--    Grid Dimens-->
     <dimen name="grid_2">16dp</dimen>
+    <dimen name="grid_2_half">8dp</dimen>
     <dimen name="card_view_corner_radius">10dp</dimen>
     <dimen name="card_view_elevation">3dp</dimen>
-    <!--    String dimens-->
+    <!--    Text dimens-->
     <dimen name="note_heading">18sp</dimen>
-    <dimen name="note_description">12sp</dimen>
+    <dimen name="note_description">16sp</dimen>
+    <dimen name="note_timestamp">12sp</dimen>
 </resources>

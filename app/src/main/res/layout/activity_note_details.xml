@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/grid_2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_note_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/note_timestamp"
+                android:textStyle="italic"
+                tools:text="TimeStamp" />
+
+            <TextView
+                android:id="@+id/tv_note_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/note_heading"
+                android:layout_marginVertical="@dimen/grid_2_half"
+                tools:text="Title Text" />
+
+            <TextView
+                android:id="@+id/tv_note_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/grid_2_half"
+                android:textSize="@dimen/note_description"
+                tools:text="Description text" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

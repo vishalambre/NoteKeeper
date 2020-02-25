@@ -3,17 +3,19 @@ package com.vishal.notekeeper.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.vishal.notekeeper.NoteData
+import com.vishal.notekeeper.data.Note
 
 class NewNoteActivityViewModel : ViewModel() {
-    private val showFab: MutableLiveData<Boolean> = MutableLiveData()
+    private val isNoteValid: MutableLiveData<Boolean> = MutableLiveData()
     private var noteTitle = ""
     private var noteDescription = ""
 
     init {
-        showFab.value = false
+        isNoteValid.value = false
     }
 
-    fun getShowFabLiveData(): LiveData<Boolean> = showFab
+    fun getIsNoteValidLiveData(): LiveData<Boolean> = isNoteValid
     fun setNoteTitleChanged(noteTitle: String) {
         this.noteTitle = noteTitle
         handleFabVisibility()
@@ -25,11 +27,13 @@ class NewNoteActivityViewModel : ViewModel() {
     }
 
     fun saveNote() {
-    //Todo implement the saving note functionality
+        NoteData.addNote(getNote())
     }
 
+    fun getNote(): Note = Note(noteTitle, noteDescription)
+
     private fun handleFabVisibility() {
-        showFab.postValue(noteTitle.isNotEmpty() && noteDescription.isNotEmpty())
+        isNoteValid.postValue(noteTitle.trim().isNotEmpty() && noteDescription.trim().isNotEmpty())
     }
 
 }
