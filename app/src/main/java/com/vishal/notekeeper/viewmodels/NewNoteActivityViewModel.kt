@@ -8,6 +8,11 @@ import com.vishal.notekeeper.data.Note
 
 class NewNoteActivityViewModel : ViewModel() {
     private val isNoteValid: MutableLiveData<Boolean> = MutableLiveData()
+
+    /*
+     * This Strings fields can also be converted into livedata's; and the activity connected to it should consume the fields from those livedata;
+     * Using this edit note functionality can be added if required
+     */
     private var noteTitle = ""
     private var noteDescription = ""
 
